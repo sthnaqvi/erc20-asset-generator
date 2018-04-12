@@ -1,0 +1,10 @@
+#Folder views configuration files
+**/.DS_Store
+.DS_Store
+Desktop.init
+.idea/
+
+# Thumbnail cache files
+._*
+Thumbs.db
+

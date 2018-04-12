@@ -1,0 +1,111 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url('../assets/fonts/Poppins-Bold.ttf');
+}
+
+* {
+    color: #5e646d;
+}
+
+.container {
+    background: linear-gradient(rgba(51, 255, 208, 0.9), rgba(4, 255, 209, 0.68)), url(../assets/images/background.jpg);
+    /*background: url('../assets/images/background.jpg'), linear-gradient(180deg, #00ffaf, #bbffe9);*/
+    /*background: linear-gradient(180deg, #00ffaf, #bbffe9);*/
+    max-width: 100%;
+    height: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 7px 0;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    float: none;
+}
+
+.wrap-form {
+    width: 790px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 60px 55px 90px 55px;
+    justify-content: center;
+}
+
+.submit-button {
+    background: linear-gradient(-40deg, #00ffaf, #d2fffb);
+    border: 1px solid beige;
+    margin-top: 4%;
+    margin-left: 31%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 244px;
+    height: 50px;
+    font-family: myFirstFont;
+    font-size: 20px;
+    color: black;
+}
+
+.submit-button:hover {
+    background: linear-gradient(-40deg, #d2fffb, #00ffaf, #d2fffb);
+}
+
+.heading {
+    font-family: myFirstFont;
+    font-size: 30px;
+}
+
+.form-control {
+    font-family: myFirstFont;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #a4fdd6;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem #93ffe16e;
+    background-color: white;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #a4fdd6;
+    border-color: #a4fdd6;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show > .btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem #93ffe16e;
+    color: black;
+}
+
+.btn-primary:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem #93ffe16e;
+}
+
+.btn-primary:hover {
+    color: black;
+    border-color: #a4fdd6;
+}
+
+#current-network {
+    color: darkred;
+}
+
+.align-self-end {
+    align-self: flex-end !important;
+    margin-top: -6%;
+    margin-bottom: 3%;
+    margin-left: 153%;
+}
+
+.metamask-text {
+    color: #5fd6b9;
+    vertical-align: sub;
+}
+
+.material-icons.metamask-span {
+    vertical-align: middle;
+}
