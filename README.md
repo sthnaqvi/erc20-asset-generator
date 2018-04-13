@@ -20,6 +20,6 @@ Then visit http://localhost:4002 in your chrome browser after you npm start the 
 
 ## License
 
-The code in this branch is licensed under MIT (see LICENSE file)
+The code in this branch is licensed under MIT (see [LICENSE file](https://github.com/karachain/erc20-asset-generator/blob/master/LICENSE))
 
 Feel free to modify or reuse the code here.
