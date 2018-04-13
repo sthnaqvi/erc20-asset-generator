@@ -3,7 +3,7 @@
 ![ERC20 Asset Generator Screenshot](https://i.imgur.com/u0HfeLf.png)
 
 ## Demo
-[https://eth-asset-generator.karachainfoundation.org/](https://eth-asset-generator.karachainfoundation.org/)
+[https://eth-asset.karachainfoundation.org/](https://eth-asset.karachainfoundation.org/)
 
 ## Installation
 
@@ -16,7 +16,7 @@
 Make sure you have installed [MetaMask](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en) chrome extension , which
                                                                                                                                                                     allows your web browser to connect to an Ethereum network.
 
-Then visit http://localhost:4002 in your chrome browser after you npm start the asset generator
+Then visit http://localhost:4002 in your chrome browser after you npm start the asset generator.
 
 ## License
 
