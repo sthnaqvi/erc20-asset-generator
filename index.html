@@ -24,7 +24,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-<div class="container ">
+<div class="container-first">
     <div class="row wrap-form animated fadeInDown">
         <div class="col-12 align-self-end" id="metamask-locked">
             <i class="material-icons metamask-span">lock</i>
@@ -48,24 +48,47 @@
         <div class="col-12 align-self-center">
             <form>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="asset-name" placeholder="Enter Name">
+                    <input type="text" class="form-control" id="asset-name" placeholder="Enter Name"><a href="#name"><i id="info-name" class="material-icons info">info</i></a>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="asset-symbol" placeholder="Enter Symbol">
+                    <input type="text" class="form-control" id="asset-symbol" placeholder="Enter Symbol"><a href="#symbol"><i id="info-symbol" class="material-icons info">info</i></a>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="asset-decimal" placeholder="Enter Decimal">
+                    <input type="text" class="form-control" id="asset-decimal" placeholder="Enter Decimal"><a href="#decimal"><i id="info-decimal" class="material-icons info">info</i></a>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="asset-supply" placeholder="Enter Supply">
+                    <input type="text" class="form-control" id="asset-supply" placeholder="Enter Supply"><a href="#supply"><i id="info-supply" class="material-icons info">info</i></a>
                 </div>
                 <div class="form-group">
                     <button align="center" class="submit-button btn btn-primary" type="submit">Submit</button>
+                </div>
+                <div class="form-group">
+                    <p align="center" id="success-msg" class="content">Contract deployment is in progress - please be patient. <br>
+                        If nothing happens for a while check if there's any errors in the console (hit F12). <br>
+                       <strong>Transaction hash: </strong> 0xe5173b53cd9bfc8c93ead6b9d6f449821440b25adc381ba95249961824bc8a4c</p>
                 </div>
             </form>
             <!--Asset Generator Form Ends here-->
         </div>
     </div>
 </div>
+<!--Section for Info Messages for Input-->
+<div class="container-second">
+    <div class="row info-content">
+        <ul class="list-group list-group-flush" id="list-group">
+            <li class="list-group-item animated fadeInUp" id="name"> • <span class="info-heading">NAME : </span><p class="info-main">Name is simply what you want to call your token, such as Bitcoin or Ethereum.</p></li>
+            <li class="list-group-item animated fadeInUp" id="symbol"> • <span class="info-heading">SYMBOL : </span><p class="info-main">Symbol will be the ticker of your token, such as BTC or ETC (normally tokens have a 3 letter uppercase symbol).</p></li>
+            <li class="list-group-item animated fadeInUp" id="decimal"> • <span class="info-heading">DECIMAL : </span><p class="info-main">Decimals is how many decimals your token can have, which determines how divisible it is. Generally tokens will have 18 decimals, which allows 1 token to be divided into trillions of pieces (eg. with 18 decimals you could have as little as 0.000000000000000001 of a token).</p></li>
+            <li class="list-group-item animated fadeInUp" id="supply"> • <span class="info-heading">SUPPLY : </span><p class="info-main">Total Supply will be number of tokens available. Token Total Supply will be Total Tokent to the power of 18 decimal places (eg. if total supply is 1000 and decimals is 18 then give 1000000000000000000000 as a value.)</p></li>
+        </ul>
+    </div>
+</div>
+<!--Section for Info Message ends-->
+<div class="container-third">
+    <div class="row copyright-row">
+        <p class="copyright">© KARACHAIN FOUNDATION 2018. All Rights Reserved.</p>
+    </div>
+</div>
+
 </body>
 </html>
