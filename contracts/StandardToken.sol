@@ -15,7 +15,7 @@ contract tokenRecipient {function receiveApproval(address _from, uint256 _value,
 contract StandardToken is ERC20, BasicToken {
 
     /* Public variables of the token */
-    string public standard = 'ERC20 1.0';
+    string public standard = 'ERC20';
 
     string public name;
 

@@ -3,28 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>ERC20 Asset Generator</title>
-    <!--CDN for jquery and popper.js-->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
     <!--CDN for Bootstrap 4-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
     <!--Main Stylesheet-->
     <link rel="stylesheet" href="styles/main.css">
     <!--CDN for Animation-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <!--Link for Material Icon-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon.png">
 </head>
 <body>
-<div class="container ">
+<div class="container">
     <div class="row wrap-form animated fadeInDown">
         <div class="col-12 align-self-end" id="metamask-locked">
             <i class="material-icons metamask-span">lock</i>
@@ -39,33 +33,47 @@
             <p class="heading" align="center">ERC20 Asset Generator</p>
             <!--Content to be Displayed when metamask is not available-->
             <p class="content" id="no-metamask">You do not appear to be connected to any Ethereum network. To use this
-                service and deploy your ICO contract, we recommend using the MetaMask plugin for Google Chrome, which
+                service and deploy your contract, we recommend using the <a href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en">MetaMask</a> plugin for Google Chrome, which
                 allows your web browser to connect to an Ethereum network.</p>
             <!--When you are connected to mainnet-->
-            <p class="content" id="current-address" align="center"><strong>Your Current Address: 0x59f8c8d6adf1e58c1c22d6ba36fd3a887d78a282</strong></p>
-            <p class="content" id="current-network" align="center">You are currently at Mainnet</p>
+            <p class="content" id="current-address" align="center"></p>
+            <p class="content" id="current-network" align="center"></p>
         </div>
         <div class="col-12 align-self-center">
-            <form>
+            <form id="asset-form" onsubmit="deploy()">
                 <div class="form-group">
-                    <input type="text" class="form-control" id="asset-name" placeholder="Enter Name">
+                    <input type="text" class="form-control" id="name" placeholder="Enter Name" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="asset-symbol" placeholder="Enter Symbol">
+                    <input type="text" class="form-control" id="symbol" placeholder="Enter Symbol" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="asset-decimal" placeholder="Enter Decimal">
+                    <input type="text" class="form-control" id="decimals" placeholder="Enter Decimal" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="asset-supply" placeholder="Enter Supply">
+                    <input type="text" class="form-control" id="total-supply" placeholder="Enter Supply" required>
                 </div>
                 <div class="form-group">
-                    <button align="center" class="submit-button btn btn-primary" type="submit">Submit</button>
+                    <button align="center" class="submit-button btn btn-primary" id="submit-btn" type="submit">Submit
+                    </button>
                 </div>
             </form>
             <!--Asset Generator Form Ends here-->
         </div>
     </div>
 </div>
+<!--Libs-->
+<!--CDN for jquery and popper.js and bootstrap-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<!--Core-->
+<script src="scripts/app.js"></script>
 </body>
 </html>
