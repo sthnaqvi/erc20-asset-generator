@@ -1,0 +1,31 @@
+{
+  "name": "erc20-asset-generator",
+  "private": false,
+  "version": "0.0.1",
+  "description": "An ethereum ERC20 token creator, issue your own token on ethereum with just a few clicks",
+  "scripts": {
+    "start": "http-webnode ./ -p 4002 -c-1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "http-webnode": "^1.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/karachain/erc20-asset-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/karachain/erc20-asset-generator/issues"
+  },
+  "homepage": "https://github.com/karachain/erc20-asset-generator#readme",
+  "author": "Sayed Tauseef Naqvi <tauseef.naqvi786@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "ethereum",
+    "ERC20",
+    "token",
+    "asset",
+    "karachain",
+    "web3js"
+  ]
+}
