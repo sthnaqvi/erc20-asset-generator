@@ -1,3 +1,9 @@
+<!--
+  Title: ERC20 Asset Generator
+  Description: An ethereum ERC20 token generator, issue your own token on ethereum with just a few clicks.
+  Author: Sayed Tauseef Naqvi
+  Keywords: ethereum, ERC20, token, asset, karachain, karachainfoundation, web3js, MetaMask
+  -->
 # ERC20 Asset Generator
 
 ![ERC20 Asset Generator Screenshot](https://i.imgur.com/u0HfeLf.png)
