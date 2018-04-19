@@ -621,19 +621,18 @@ $("#decimals").keypress(function (e) {
         return false;
     }
 });
-
-//TODO:show token total supply will be on bottom of total supply input
-// $("#total-supply").keypress(function (e) {
-//     //if the letter is not digit then display error and don't type anything
-//     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
-//         //display error message
-//         $("#total-supply-error-msg").html("Digits Only").show().fadeOut("slow");
-//         return false;
-//     } else {
-//         $("#total-supply").keyup(function (e) {
-//             if ($("#decimals").val() && $('#total-supply').val()) {
-//                 console.log(Math.trunc($('#total-supply').val() / Math.pow(10, $("#decimals").val())))
-//             }
-//         })
-//     }
-// });
+$("#total-supply").keypress(function (e) {
+    //if the letter is not digit then display error and don't type anything
+    if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+        $("#total-supply-error-msg").html("Digits Only").show().fadeOut("slow");
+        return false;
+    } else {
+        //TODO:show token total supply will be on bottom of total supply input
+        // $("#total-supply").keyup(function (e) {
+        //     if ($("#decimals").val() && $('#total-supply').val()) {
+        //         console.log(Math.trunc($('#total-supply').val() / Math.pow(10, $("#decimals").val()))
+        //     }
+        // })
+    }
+});
