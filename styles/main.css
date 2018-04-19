@@ -54,6 +54,10 @@
     font-size: 30px;
 }
 
+.form-group {
+    margin-bottom: 1.2em;
+}
+
 .form-control {
     font-family: myFirstFont;
 }
@@ -107,46 +111,65 @@
 .material-icons.metamask-span {
     vertical-align: middle;
 }
-.material-icons.info{
+
+.material-icons.info {
     position: absolute;
     margin-top: -5%;
     margin-left: 97%;
 }
-.container-second{
-    background:#484747;
+
+.container-second {
+    background: #484747;
     height: auto;
     padding: 10%;
 }
-.info-content{
-   justify-content: center;
+
+.info-content {
+    justify-content: center;
     color: white;
 }
-.list-group-item{
+
+.list-group-item {
     background: transparent !important;
     color: white;
     transition-delay: 4s !important;
 }
 
-
-.info-heading{
+.info-heading {
     color: #00ffaf;
 }
-.info-main{
+
+.info-main {
     margin-top: -25px;
     margin-bottom: 1rem;
     margin-left: 8%;
     color: white;
 }
-.container-third{
+
+.info-main > strong {
+    color: white;
+}
+
+.container-third {
     background: #1f1f1f;
     color: white;
     justify-content: center;
 }
-.copyright-row{
+
+.copyright-row {
     padding-top: 2%;
     justify-content: center;
 
 }
-.copyright{
+
+.copyright {
     color: white;
+}
+
+.error-msg {
+    color: red;
+    position: absolute;
+    font-size: 0.7em;
+    margin-top: 0.2em;
+    margin-left: 0.75rem;
 }

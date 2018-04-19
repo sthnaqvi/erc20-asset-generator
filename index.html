@@ -6,10 +6,10 @@
     <!--CDN for Bootstrap 4-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!--Main Stylesheet-->
-    <link rel="stylesheet" href="styles/main.css">
     <!--CDN for Animation-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!--Main Stylesheet-->
+    <link rel="stylesheet" href="styles/main.css">
     <!--Link for Material Icon-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -33,7 +33,9 @@
             <p class="heading" align="center">ERC20 Asset Generator</p>
             <!--Content to be Displayed when metamask is not available-->
             <p class="content" id="no-metamask">You do not appear to be connected to any Ethereum network. To use this
-                service and deploy your contract, we recommend using the <a href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en">MetaMask</a> plugin for Google Chrome, which
+                service and deploy your contract, we recommend using the <a
+                        href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en">MetaMask</a>
+                plugin for Google Chrome, which
                 allows your web browser to connect to an Ethereum network.</p>
             <!--When you are connected to mainnet-->
             <p class="content" id="current-address" align="center"></p>
@@ -42,22 +44,27 @@
         <div class="col-12 align-self-center">
             <form id="asset-form">
                 <div class="form-group">
-                    <input type="text" class="form-control" id="name" placeholder="Name" required><a href="#asset-name"><i id="info-name" class="material-icons info">info</i></a>
+                    <input type="text" class="form-control" id="name" placeholder="Name" required><a href="#asset-name"><i
+                        id="info-name" class="material-icons info">info</i></a>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="symbol" placeholder="Symbol" required><a href="#asset-symbol"><i id="info-symbol" class="material-icons info">info</i></a>
+                    <input type="text" class="form-control" id="symbol" placeholder="Symbol" required><a
+                        href="#asset-symbol"><i id="info-symbol" class="material-icons info">info</i></a>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="decimals" placeholder="Decimal" required><a href="#asset-decimal"><i id="info-decimal" class="material-icons info">info</i></a>
+                    <input type="text" class="form-control" maxlength="2" id="decimals" placeholder="Decimals" required>
+                    <a href="#asset-decimal"><i id="info-decimal" class="material-icons info">info</i></a>
+                    <span class="error-msg" id="decimals-error-msg"></span>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="total-supply" placeholder="Total Supply" required><a href="#asset-supply"><i id="info-supply" class="material-icons info">info</i></a>
+                    <input type="text" class="form-control" id="total-supply" placeholder="Total Supply " required>
+                    <a href="#asset-supply"><i id="info-supply" class="material-icons info">info</i></a>
+                    <span class="error-msg" id="total-supply-error-msg"></span>
                 </div>
                 <div class="form-group">
                     <button align="center" class="submit-button btn btn-primary" id="submit-btn" type="submit">Submit
                     </button>
                 </div>
-
             </form>
             <!--Asset Generator Form Ends here-->
             <p id="statusText"></p>
@@ -68,10 +75,24 @@
 <div class="container-second">
     <div class="row info-content">
         <ul class="list-group list-group-flush" id="list-group">
-            <li class="list-group-item animated fadeInUp" id="asset-name"> • <span class="info-heading">NAME : </span><p class="info-main">Name is simply what you want to call your token, such as Bitcoin or Ethereum.</p></li>
-            <li class="list-group-item animated fadeInUp" id="asset-symbol"> • <span class="info-heading">SYMBOL : </span><p class="info-main">Symbol will be the ticker of your token, such as BTC or ETC (normally tokens have a 3 letter uppercase symbol).</p></li>
-            <li class="list-group-item animated fadeInUp" id="asset-decimal"> • <span class="info-heading">DECIMAL :  </span><p class="info-main">Decimals is how many decimals your token can have, which determines how divisible it is. Generally tokens will have 18 decimals, which allows 1 token to be divided into trillions of pieces (eg. with 18 decimals you could have as little as 0.000000000000000001 of a token).</p></li>
-            <li class="list-group-item animated fadeInUp" id="asset-supply"> • <span class="info-heading">SUPPLY : </span><p class="info-main">Total Supply will be number of tokens available. Token Total Supply will be Total Tokent to the power of 18 decimal places (eg. if total supply is 1000 and decimals is 18 then give 1000000000000000000000 as a value.)</p></li>
+            <li class="list-group-item animated fadeInUp" id="asset-name"> • <span class="info-heading">NAME : </span>
+                <p class="info-main">Name is simply what you want to call your token, such as Bitcoin or Ethereum.</p>
+            </li>
+            <li class="list-group-item animated fadeInUp" id="asset-symbol"> • <span
+                    class="info-heading">SYMBOL : </span>
+                <p class="info-main">Symbol will be the ticker of your token, such as BTC or ETC (normally tokens have a
+                    3 letter uppercase symbol).</p></li>
+            <li class="list-group-item animated fadeInUp" id="asset-decimal"> • <span
+                    class="info-heading">DECIMAL :  </span>
+                <p class="info-main">Decimals is how many decimal places your token can have, which determines how
+                    divisible it is. Generally tokens will have 18 decimals, which allows 1 token to be divided into
+                    trillions of pieces (eg. with 18 decimals you could have as little as 0.000000000000000001 of a
+                    token).</p></li>
+            <li class="list-group-item animated fadeInUp" id="asset-supply"> • <span
+                    class="info-heading">TOTAL SUPPLY : </span>
+                <p class="info-main">Total Supply will be number of tokens available. Token Total Supply <strong>VALUE</strong>
+                    will be total number of tokens to the power of decimal places. (eg. if total supply is 1000 and
+                    decimals is 18 then give 1000000000000000000000 as a value.)</p></li>
         </ul>
     </div>
 </div>
@@ -84,8 +105,8 @@
 
 <!--Libs-->
 <!--CDN for jquery and popper.js and bootstrap-->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
