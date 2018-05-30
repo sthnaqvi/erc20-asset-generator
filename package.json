@@ -12,12 +12,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/karachain/erc20-asset-generator.git"
+    "url": "https://github.com/sthnaqvi/erc20-asset-generator.git"
   },
   "bugs": {
-    "url": "https://github.com/karachain/erc20-asset-generator/issues"
+    "url": "https://github.com/sthnaqvi/erc20-asset-generator/issues"
   },
-  "homepage": "https://github.com/karachain/erc20-asset-generator#readme",
+  "homepage": "https://github.com/sthnaqvi/erc20-asset-generator#readme",
   "author": "Sayed Tauseef Naqvi <tauseef.naqvi786@gmail.com>",
   "license": "MIT",
   "keywords": [
@@ -25,7 +25,6 @@
     "ERC20",
     "token",
     "asset",
-    "karachain",
     "web3js"
   ]
 }
