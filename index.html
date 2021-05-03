@@ -19,11 +19,11 @@
 <body>
 <div class="container-first">
     <div class="row wrap-form animated fadeInDown">
-        <div class="col-12 align-self-end" id="metamask-locked">
+        <div class="col-12 align-self-end hide" id="metamask-locked">
             <i class="material-icons metamask-span">lock</i>
             <span class="metamask-text">Metamask Locked</span>
         </div>
-        <div class="col-12 align-self-end" id="metamask-unlocked">
+        <div class="col-12 align-self-end hide" id="metamask-unlocked">
             <i class="material-icons metamask-span">lock_open</i>
             <span class="metamask-text">Metamask Unlocked</span>
         </div>
@@ -31,14 +31,10 @@
         <div class="col-12 align-self-center">
             <p class="heading" align="center">ERC20 Asset Generator</p>
             <!--Content to be Displayed when metamask is not available-->
-            <p class="content" id="no-metamask">You do not appear to be connected to any Ethereum network. To use this
-                service and deploy your contract, we recommend using the <a
-                        href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en">MetaMask</a>
-                plugin for Google Chrome, which
-                allows your web browser to connect to an Ethereum network.</p>
+            <p class="content" id="metamask-status"></p>
             <!--When you are connected to mainnet-->
-            <p class="content" id="current-address" align="center"></p>
-            <p class="content" id="current-network" align="center"></p>
+            <p class="content hide" id="current-address" align="center"></p>
+            <p class="content hide" id="current-network" align="center"></p>
         </div>
         <div class="col-12 align-self-center">
             <form id="asset-form">
@@ -107,6 +103,7 @@
 <script src="assets/js/jquery-3.3.1.min.js"></script>
 <script src="assets/js/popper.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/web3.min.js"></script>
 <!--Core-->
 <script src="scripts/app.js"></script>
 </body>
