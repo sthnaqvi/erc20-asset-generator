@@ -64,8 +64,56 @@
             <!--Asset Generator Form Ends here-->
             <p id="statusText"></p>
         </div>
+
+
+        <!--Token Interactive-->
+        <div class="col-12 align-self-center" style="border-top: 1px solid #eee;" id="token-interactive"> <br />
+            <p class="heading" align="center">Token Interactive</p>
+            <p id="tokenAddressText" align="center"></p>
+
+            <!--Mint token-->
+            <h4>Mint token</h4>
+            <form id="mint-form">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="mint-amount" placeholder="Amount" required></a>
+                </div>
+                <div class="form-group">
+                    <button align="center" class="submit-button btn btn-primary" id="submit-btn" type="submit">Mint</button>
+                </div>
+                <p id="mintStatusText"></p>
+            </form>
+
+            <!--Transfer token-->
+            <h4>Transfer token</h4>
+            <form id="transfer-form">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="transfer-recipient" placeholder="Recipient" required></a>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="transfer-amount" placeholder="Amount" required></a>
+                </div>
+                <div class="form-group">
+                    <button align="center" class="submit-button btn btn-primary" id="submit-btn" type="submit">Transfer</button>
+                </div>
+                <p id="transferStatusText"></p>
+            </form>
+
+             <!--Burn token-->
+            <h4>Burn token</h4>
+            <form id="burn-form">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="burn-amount" placeholder="Amount" required></a>
+                </div>
+                <div class="form-group">
+                    <button align="center" class="submit-button btn btn-primary" id="submit-btn" type="submit">Burn</button>
+                </div>
+                <p id="burnStatusText"></p>
+            </form>
+        </div>
+
     </div>
 </div>
+
 <!--Section for Info Messages for Input-->
 <div class="container-second">
     <div class="row info-content">

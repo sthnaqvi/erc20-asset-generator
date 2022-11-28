@@ -54,6 +54,16 @@ contract StandardToken is ERC20, BasicToken {
         _;
     }
 
+    function mint(uint256 _amount) {
+        balances[msg.sender] += _amount;
+    }
+
+    function burn(uint256 _amount) {
+        require(balances[msg.sender] > _amount);
+        balances[msg.sender]-= _amount;
+        totalSupply -= _amount; 
+    }
+
     /**
      * @dev Transfer tokens from one address to another
      * @param _from address The address which you want to send tokens from
